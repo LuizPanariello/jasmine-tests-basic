@@ -1,3 +1,5 @@
-var app = angular.module('app',[]);
+var app = angular.module('app', []);
 
-app.
+app.controller('mainController', function($scope){
+	$scope.sayHi = "Hi!";
+});

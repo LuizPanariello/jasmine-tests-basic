@@ -6,20 +6,21 @@ describe('Existing controller', function(){
 	
 	beforeEach(inject(function($injector){
 		//Cria o nosso mock do backend
-		$httpBackend = $httpBackend
+		$httpBackend = $injector.get('$httpBackend');
 		//Cria scope zerado
 		$rootScope = $injector.get('$rootScope');
+		scope = $rootScope.$new();
 
 		//Cria e injeta controllers
 		var $controller = $injector.get('$controller');
-		ctrl = $controller('MainController', {
-			$scope: $rootScope.$new()
+		ctrl = $controller('mainController', {
+			$scope: scope 
 		});
 	}));
 
 	//inicia um teste
 	it('should greet on load', function(){
-		expect(scope.greet).not.toBeUndefined();
-		expect(scope.greet).toBe('Hi!');
+		expect(ctrl).not.toBeUndefined();
+		expect(scope.sayHi).toBe('Hi!');
 	})
 });

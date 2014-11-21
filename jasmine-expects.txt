@@ -1,0 +1,23 @@
+.toBe()
+.not.
+.toBeUndefined()
+.toBeDefined()
+.toBeNull()
+.toBeTruthy()
+.toBeFalsy()
+.toContain()
+.toBeLessThan()
+.toBeGreaterThan()
+.toBeCloseTo()
+.toThrow() // Espera uma exception
+.toEqual()
+
+xdescibre()
+xit()
+
+spyOn(OBJ, METHOD)
+.toHaveBeenCalled()
+.toHaveBeenCalledWith(PARAM)
+.calls.any() //Checa se essa função foi chamada anytime
+.calls.count() //quantidade de vezes chamada
+
